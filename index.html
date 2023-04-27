@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CUTV TV Proof of Concept</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+        }
+
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+            }
+
+        #video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+        }
+
+        #headline-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 16px;
+            border-top: 1px solid white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 8.5vh;
+        }
+
+        #headline-hold {
+        }
+
+        #headline-hold p {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        #headline-container h1 {
+            font-size: 3.2vh;
+            text-align: left;
+            margin: 0;
+        }
+
+        #logo {
+            /* background-color: greenyellow; */
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #published-info {
+            /* background-color: green; */
+            font-size: 12px;
+            text-align: right;
+        }
+        
+        #published-by {
+            /* background-color: red; */
+        }
+
+         #published-date {
+            /* background-color: blue; */
+        }
+
+        #clock {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 14px;
+            color: #fff;
+            background: black;
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        #logo img {
+           height: 90%;
+        }
+
+        #texts {
+            /* background-color: pink; */
+            padding: 0px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            border-left: 1px solid white;
+        }
+
+        #captions {
+            position: fixed;
+            display: inline-block;
+            bottom: 10vh;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 7px;
+            margin: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="video-container">
+        <video id="video" autoplay muted></video>
+    </div>
+
+    <div id="captions">
+        Caption example
+    </div>
+
+    <div id="headline-container">
+        <div id="logo"><img src="logo.png" alt=""></div>
+        <div id="texts">
+        <div id="headline-hold">
+            <p><i>Currently playing:</i></p>
+            <h1 id="headline"></h1>
+        </div>
+        <p id="published-info">
+            <b><span id="published-by"></span></b> <br> <span id="published-date"></span>
+        </p>
+    </div>
+    </div>
+
+    <div id="clock"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

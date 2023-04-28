@@ -39,19 +39,24 @@
 
         #headline-container {
             position: fixed;
-            bottom: 0;
-            width: 100%;
+            bottom: 3vh;
+            width: 97%;
             background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
             font-size: 16px;
-            border-top: 1px solid white;
+            border: 1px solid white;
+            border-bottom: 1px solid white;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 8.5vh;
+            height: auto;
+            padding: 10px 0px 10px 10px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         #headline-hold {
+            padding-left: 10px;
         }
 
         #headline-hold p {
@@ -60,9 +65,10 @@
         }
 
         #headline-container h1 {
-            font-size: 3.2vh;
+            font-size: 4.5vh;
             text-align: left;
             margin: 0;
+            letter-spacing: -1.2px;
         }
 
         #logo {
@@ -76,8 +82,9 @@
 
         #published-info {
             /* background-color: green; */
-            font-size: 12px;
+            font-size: 11px;
             text-align: right;
+            padding-right: 0px;
         }
         
         #published-by {
@@ -100,7 +107,8 @@
         }
 
         #logo img {
-           height: 90%;
+           /* height: 90%; */
+           max-width: 110px;
         }
 
         #texts {
@@ -111,13 +119,13 @@
             justify-content: space-between;
             height: 100%;
             width: 100%;
-            border-left: 1px solid white;
+            /* border-left: 1px solid white; */
         }
 
         #captions {
             position: fixed;
             display: inline-block;
-            bottom: 10vh;
+            bottom: 16.5vh;
             left: 50%;
             transform: translateX(-50%);
             background-color: rgba(255, 255, 255, 0.7);
@@ -134,14 +142,13 @@
     </div>
 
     <div id="captions">
-        Caption example
+    Captions look like this Captions look like this Captions look like this
     </div>
 
     <div id="headline-container">
         <div id="logo"><img src="logo.png" alt=""></div>
         <div id="texts">
         <div id="headline-hold">
-            <p><i>Currently playing:</i></p>
             <h1 id="headline"></h1>
         </div>
         <p id="published-info">
